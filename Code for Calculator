@@ -1,0 +1,88 @@
+#include<stdio.h>
+#include<conio.h>
+void main ()
+{
+int a,fact=1,n,I,i,j,g,s,k,l;
+int A[3][3],B[3][3],M[3][3];
+float C,F,K;
+clrscr();
+printf("\t\tMINI CALCULATOR");
+printf("");
+printf("\nEnter Your Choice");
+scanf("%d",&a);
+switch(a)
+{
+case 1:
+printf("\nENTER THE NUMBER");
+scanf("%d",&n);
+for(I=1;I<=n;I++)
+{
+ fact=fact*I;
+}
+printf("\nFactorial Of %d Is %d",n,fact);
+break;
+
+case 2:
+printf("\nEnter Temperature In Celcius");
+scanf("%f",&C);
+F=(9.0/5.0)*C+32;
+K=C+273;
+printf("\nConverted Temperature In Fahernite Is %.2f",F);
+printf("\nConverted Temperature In Kelvin Is %.2f",K);
+break;
+
+case 3:
+printf("Enter First 3X3 Matrix");
+for(i=0;i<=2;i++)
+{
+ for(j=0;j<=2;j++)
+ {
+  scanf("%d",&A[i][j]);
+ }
+}
+printf("Enter Second 3X3 Matrix");
+for(i=0;i<=2;i++)
+{
+ for(j=0;j<=2;j++)
+ {
+  scanf("%d",&B[i][j]);
+ }
+}
+for(i=0;i<=2;i++)
+{
+ for(j=0;j<=2;j++)
+ {
+  M[i][j]=A[i][j]+B[i][j];
+ }
+}
+for(i=0;i<=2;i++)
+{
+ for(j=0;j<=2;j++)
+ {
+  printf("%d",M[i][j]);
+ }
+ printf("\t\n ");
+}
+break;
+
+case 4:
+printf("Enter The Number");
+scanf("%d",&g);
+s=g*g;
+printf("The Square Root Of %d Is %d",g,s);
+break;
+
+case 5:
+printf("Enter The Number");
+scanf("%d",&l);
+k=l*l*l;
+printf("The Cube Root If %d Is %d",l,k);
+break;
+
+default:
+printf("!!INVALID CHOICE!!");
+}
+printf("\n\nTHANK YOU!");
+printf("\nGROUP MEMBERS:-\nMITESH SALOKHE\nSHRUTI RAUT\nSUDANSHU SARVE\nGAURI SHINDE");
+getch();
+}
